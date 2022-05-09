@@ -1,0 +1,1125 @@
+/*****************************************************************************
+  Name: Mathematical, Factorial, Primalilty, Composality, ascii:
+  Copyright: Reserved With The Author:
+  Author: Saif Ur Rehman
+  Date: 31/03/10 23:49
+  Description: This Program performs mathematical operations on two numbers,DMAS,
+               finds if the two numbers are prime or composit, finds the factorial
+               of both the numbers, also print ascii notation of both numbers: 
+******************************************************************************/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+    int i, u, t, arr[4] = {4, 19, 1, 3};
+    cout<<"SORTING THROUGH BUBBLE SORT : \n";
+    for(u=3; u>=1; u--)
+    
+             for(i=0; i<u; i++)
+             
+                      if(arr[i]>arr[i+1])
+                      {
+                      t=arr[i];
+                      arr[i]=arr[i+1];
+                      arr[i+1] = t;
+                      }
+             cout<<"Sorted Values are "<<endl;
+             for(i=0; i<=3; i++)
+             cout<<arr[i]<<endl;
+      
+      /*
+      cout<<"SORTING THROUGH SELECTION SORT : \n";     
+        int i, u, p, m, t, arr[4]={4,19, 1, 13};
+        for(u=0; u<3; u++)
+        {
+                 m = arr[u];
+                 for(i=u; i<=3; i++)
+                 if(m>arr[i])
+                 {
+                             m = arr[i];
+                             p = i;
+                 }
+                 t = arr[p];
+                 arr[p]=arr[u];
+                 arr[u] = t;
+        } 
+        cout<<"SORTED VALUES: ";
+        for(i=0; i<=3; i++)
+        cout<<arr[i]<<endl;
+         */   
+         
+             
+    
+    getch();
+    
+}
+#include <iostream>
+#include<conio.h>
+#define clrscr() system("cls");
+using namespace std;
+int main()
+{
+    int words = 0;
+    char a, sel;
+saif:    cout<<"\t\tTHIS IS A WORD COUNTER PROGRAM: \n\n";
+    do
+    {
+       a =  getche();
+       if (a == ' ')
+       words ++;
+       
+    }
+    while(a!='\r');
+    cout<<"\n\nWORDS IN YOUR TEXT ARE: "<<words+1<<"\n\n\n";
+wrong:    cout<<"DO YOU WANT TO TRY AGAIN:\n YES(y) Or NO(n):";
+    cin>>sel;
+    if (sel=='y'||sel=='Y')
+    {
+           clrscr();
+           goto saif;
+    }
+    else if(sel=='n'||sel=='N')
+    {
+         cout<<"THANKS FOR USING THIS PROGRAM.GOODBYE!";
+    }
+    else
+    {
+    cout<<"WRONG SELECTION, YOU EITHER HAVE TO SELECT \"Y\" OR \"N\":\n";
+    goto wrong;
+    }
+    getch();
+}
+#include <iostream>
+#include <conio.h>
+#define clrscr() system("cls");
+using namespace std;
+int main ()
+{
+    int a, b, c;
+saif:    cout <<"\t\tEXPAND BY THE FORMULA (A+B)^2 = A^2 + B^2 + 2AB :\n\n";
+    printf("ENTER THE VALUES OF:\n");
+    cout <<"\t A = ";
+    cin >>a;
+    cout <<"\t B = ";
+    cin >>b;
+    if (b<=0)
+    
+    cout <<"\n("<<a<<"X"<<""<<b<<"Y)^2 = ";
+    else
+    cout <<"\n("<<a<<"X"<<"+"<<b<<"Y)^2 = ";
+    
+    if (2*a*b<0)
+    cout <<a*a<<"X^2"<<""<<2*a*b<<"XY+"<<b*b<<"Y^2"<<endl;
+    else
+    cout <<a*a<<"X^2"<<"+"<<2*a*b<<"XY+"<<b*b<<"Y^2"<<endl;
+    char sel;
+wrong:    cout<<"\n\n\t\tDO YOU WANT TO TRY AGAIN [Y/N]?";
+    cin>>sel;
+    if (sel=='y'||sel=='Y')
+    {
+                 clrscr();
+                 goto saif;
+    }
+    else if(sel=='n'||sel=='N')
+    {
+         cout<<"\n\t\tTHANKS BYE ! ";
+    }
+    else
+    {
+        cout<<"\nWRONG SELECTION: YOU EITHER HAVE TO SELECT \"Y\" OR \"N\"";
+        goto wrong;
+    }
+    getch();
+}
+/*****************************************************************************
+  Name: Mathematical, Factorial, Primalilty, Composality, ascii:
+  Copyright: Reserved With The Author:
+  Author: Saif Ur Rehman
+  Date: 31/03/10 23:49
+  Description: This Program performs mathematical operations on two numbers,DMAS,
+               finds if the two numbers are prime or composit, finds the factorial
+               of both the numbers, also print ascii notation of both numbers: 
+******************************************************************************/
+#include<iostream>
+#include<stdio.h>
+#define clrscr() system("cls");
+using namespace std;
+int main()
+{
+    int a, b, fact = 1, fact2 = 1, flag=0, ind=0;
+    char sel, c, d;
+saif:    cout<<"\t\t\tENTER TWO NUMBERS: \n";
+    cout<<"\tA = ";
+    cin>>a;
+    cout<<"\tB = ";
+    cin>>b;
+    cout<<"\t\t\tMATHEMATICAL OPERATIONS:\n";
+    cout<<"\tA / B = "<<a/b;
+    cout<<"\n\tA * B = "<<a*b;
+    cout<<"\n\tA + B = "<<a+b;
+    cout<<"\n\tA - B = "<<a-b;
+    cout<<"\n\tA % B = "<<a%b;
+    if(a>b)
+    {
+       cout<<"\n \tA > B ";
+    }
+    else 
+    {
+       cout<<"\n\tB > A ";
+    }
+    if(a==b)
+    {
+      cout<<"\n\tA IS = B\n";
+    }
+    // Primality and Composality:
+    cout<<"\n\n\t\t\tPRIME OR COMPOSITE ? \n";
+    
+    for (int i=2; i<a; i++)
+    {
+        if (a%i==0)
+        flag = 1;
+    }
+    if (flag){cout<<"\n\tA IS COMPOSIT";}else{cout<<"\n\tA IS PRIME";}
+    
+    for (int i=2; i<b; i++)
+    {
+        if (b%i==0)
+        ind = 1;
+    }
+    if (ind){cout<<"\n\tB IS COMPOSIT\n";}else{cout<<"\n\tB IS PRIME\n";}
+    // Factorial of A and B:
+    cout<<"\n\n\t\t\tEVEN OR ODD ? \n";
+    if(a%2==0){cout<<"\n\tA IS EVEN\n";}else{cout<<"\n\tA IS ODD\n";}
+    if(b%2==0){cout<<"\tB IS EVEN\n";}else{cout<<"\tB IS ODD\n";}
+    cout<<"\n\n\t\t\tFACTORIAL OF BOTH NUMBERS ? \n";
+    
+    for (int i=1; i<=a; i++)
+    {
+        fact = fact*i;
+    }
+    cout<<"\n\tFACTORIAL OF A = "<<fact;
+
+    for (int i=1;i<=b;i++)
+    {
+        fact2 = fact2 * i;
+    }
+    cout<<"\n\tFACTORIAL OF B = "<<fact2;
+    // ASCII CODE OF BOTH THE NUMBERS:
+    
+    c = a;
+    d = b;
+    cout<<"\n\n\t\t\tASCII NOTATATION OF BOTH THE NUMBERS ? \n";
+    cout<<"\n\tASCII NOTATION OF A IS = "<<c;
+    cout<<"\n\tASCII NOTATION OF B IS = "<<d; 
+wrong:    cout<<"\n\n\t\t\tDO YOU WANT TO TRY OTHER NUMBERS [Y/N]?";
+    cin>>sel;
+    if (sel=='y'||sel=='Y')
+    {
+                 clrscr();
+                 goto saif;
+    }
+    else if(sel=='n'||sel=='N')
+    {
+         cout<<"\n\t\tTHANKS BYE ! ";
+    }
+    else
+    {
+        cout<<"\nWRONG SELECTION: YOU EITHER HAVE TO SELECT \"Y\" OR \"N\"";
+        goto wrong;
+    }
+}
+#include<iostream>
+#include<conio.h>
+#define clrscr() system("cls");
+#define pi = 3.14;
+using namespace std;
+int main()
+{
+    float volume, circle, sphere, c_radius, cl_radius, s_radius, height, cylinder,;
+    cout<<"\t\tAREA OF A CIRCLE, VOLUME OF SPHERE, VOLUME OF CYLINDER: ";
+    cout<<"\nENTER RADIUS OF THE CIRCLE :\n\t R =  ";
+    cin>>c_radius;
+    circle = 3.14*(c_radius*c_radius);
+    cout<<"\n\t AREA  = "<<circle<<endl;
+    cout<<"\nENTER RADIUS OF SPHERE :\n\t R = ";
+    cin>>s_radius;
+    sphere = 3.14*(s_radius*s_radius*s_radius)*4/3;
+    cout<<"\n\tVOLUME = "<<sphere<<endl;
+    cout<<"\nENTER RADIUS AND HEIGHT OF CYLINDER:\n\t R =  ";
+    cin>>cl_radius;
+    cout<<"\t H =  ";
+    cin>>height;
+    cylinder = 3.14*(cl_radius*cl_radius)*height;
+    cout<<"\n\tVOLUME = "<<cylinder<<endl;
+    cout<<"END OF PROGRAM: THANKS BYE!";
+    getch();
+}
+#include<iostream>
+#include<conio.h>
+#define clrscr() system("cls");
+#define pi = 3.14;
+using namespace std;
+int main()
+{
+    float volume, circle, sphere, c_radius, cl_radius, s_radius, height, cylinder,;
+    cout<<"\t\tAREA OF A CIRCLE, VOLUME OF SPHERE, VOLUME OF CYLINDER: ";
+    cout<<"\nENTER RADIUS OF THE CIRCLE :\n\t R =  ";
+    cin>>c_radius;
+    circle = 3.14*(c_radius*c_radius);
+    cout<<"\n\t AREA  = "<<circle<<endl;
+    cout<<"\nENTER RADIUS OF SPHERE :\n\t R = ";
+    cin>>s_radius;
+    sphere = 3.14*(s_radius*s_radius*s_radius)*4/3;
+    cout<<"\n\tVOLUME = "<<sphere<<endl;
+    cout<<"\nENTER RADIUS AND HEIGHT OF CYLINDER:\n\t R =  ";
+    cin>>cl_radius;
+    cout<<"\t H =  ";
+    cin>>height;
+    cylinder = 3.14*(cl_radius*cl_radius)*height;
+    cout<<"\n\tVOLUME = "<<cylinder<<endl;
+    cout<<"END OF PROGRAM: THANKS BYE!";
+    getch();
+}
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+    int a;
+    char b;
+   
+   for (a =1;a<=256; a++)
+   {
+       b = a;
+   
+   
+   cout<<a<<"="<<b<<"\t\t";
+  
+  
+   }
+   
+    getch();
+}
+#include <iostream>
+#include <conio.h>
+#define clrscr() system("cls")
+using namespace std;
+int main ()
+{
+    float rupees, darham, pound, dollar, ryal;
+    char OP, Y_N;
+saif:   cout<<"\t\tTHIS IS A CURRENCY EXHCHANGER PROGRAM:";
+    cout<<"\n\tWHICH CURRENCY DO YOU WANT TO CONVERT IN PAKISTANI RUPEES?";
+    cout<<"\n\nDOLLLAR (d), SAUDI RYAL(r), DUBAI DARHAM(h), POUND(p): ";
+    
+    cin >>OP;
+    if(OP=='d')
+    {
+             cout<<"\nENTER DOLLARS TO CONVERT IN PAKISTANI RUPEES:";
+             cin>>dollar;
+             rupees = dollar * 78;
+             cout<<dollar<<" DOLLARS ARE  = Rs. "<<rupees<<"/-";  
+    }
+    else if(OP=='r')
+    {
+         cout<<"\nENTER RYALS TO CONVERT IN PAKISTANI RUPEES:";
+             cin>>ryal;
+             rupees = ryal * 23;
+             cout<<ryal<<" RYALS ARE  = Rs."<<rupees<<"/-"; 
+    }
+    else if (OP=='h')
+    {
+         cout<<"\nENTER DARHMAS TO CONVERT IN PAKISTANI RUPEES:";
+             cin>>darham;
+             rupees = darham * 22;
+             cout<<darham <<" DARHAMS ARE  = Rs."<<rupees<<"/-"; 
+    }
+    else 
+    {
+         cout<<"\nENTER POUNDS TO CONVERT IN PAKISTANI RUPEES:";
+             cin>>pound;
+             rupees = pound * 110;
+             cout<<pound<<" POUNDS ARE  = Rs. "<<rupees<<"/-"; 
+    }
+    cout<<"\n\nDO YOU WANT TO PERFORM OTHER CONVERSIONS?";
+    cin>>Y_N;
+    if(Y_N=='y')
+    {
+                clrscr();
+                goto saif;
+    }
+    else if(Y_N=='n')
+    {
+        cout<<"THANS FOR USING THIS PROGRAM!!";
+    }
+    else
+    {
+        cout<<"WRONG SELECTION, YOU EITHER HAVE TO SELECT \"Y\" OR \"N\":";
+    }
+    getch();
+}
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+int main()
+{
+    int n, r;
+    cout<<"Enter any integer no:";
+    cin>>n;
+    while(n>=1)
+    {
+               r = n%2;
+               n = n/2;
+               cout<<r;
+    }
+    
+    getch();
+            
+}
+#include<iostream>
+#include<conio.h>
+#define clrscr() system("cls");
+using namespace std;
+int main()
+{
+    int a, b;
+    char sel;
+saif:    cout<<"ENTER A NUMBER TO FIND IT'S DEVISORS:\n\t A = ";
+    cin>>a;
+    cout<<"DEVISORS OF "<<a<<" ARE: \n";
+    for(int i=a; i>=1; i--)
+    {
+             if(a%i==0)
+             {
+             cout<<"\t\t"<<a/i<<endl;
+             }
+    }
+   
+    cout<<"ENTER A NUMBER TO FIND IT'S MULTIPLES UPTO 100:\n\t A = ";
+    cin>>b;
+    cout<<"MULTIPLES OF "<<b<<" UPTO 100 ARE: \n";
+    for(int i=1;i<=100/b; i++)
+    {
+            cout<<b*i<<"\t";
+    }         
+    wrong:    cout<<"\n\n\t\tDO YOU WANT TO TRY OTHER NUMBERS [Y/N]?";
+    cin>>sel;
+    if (sel=='y'||sel=='Y')
+    {
+                 clrscr();
+                 goto saif;
+    }
+    else if(sel=='n'||sel=='N')
+    {
+         cout<<"\n\t\tTHANKS BYE ! ";
+    }
+    else
+    {
+        cout<<"\nWRONG SELECTION: YOU EITHER HAVE TO SELECT \"Y\" OR \"N\"";
+        goto wrong;
+    }
+    getch();
+}
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+    int a[3][3];
+    cout<<"ENTER THE ELEMENTS OF FIRST MATRIX: \n";
+    for(int i=0;i<3; i++)
+    {
+            for(int j=0; j<3; j++)
+            {
+                    cout<<"row = "<<i<<" col = "<<j<<" ";
+                    cin>>a[i][j];
+                    
+            }
+            cout<<endl;
+    }
+    cout<<"------------------\n";
+    cout<<"MATRIX IN ARRANGED FORM IS : \n";
+    for(int i=0;i<3; i++)
+    {
+            for(int j=0; j<3; j++)
+            {
+                    
+                    cout<<a[i][j]<<"\t";
+                    
+            }
+            cout<<endl;
+    }
+    cout<<"------------------";
+            getch();
+}
+#include <iostream>
+#include <conio.h>
+#define clrscr() system("cls");
+
+using namespace std;
+int main()
+{
+    float MARKS_OBTAINED, AVERAGE, PERCENTAGE, A,B,C,D,E,F;
+    char OPT, c;
+saif:    cout<<"\t\tTHIS A DETAILED MARKS CERTIFICATE PROGRAM\n\n";
+    cout<<"1. CIRCUIT AND SYSTEMS MARKS = ";
+    cin>>A;
+    if(A>=100)
+           {
+                   cout<<"YOU CAN'T ENTER MARKS MORE THAN 100:";
+                   
+                   cout<<"\nPRESS c TO TRY AGAIN:";
+                   cin>>c;
+                   if (c=='c')
+                   {
+                              clrscr();
+                              goto saif;
+                   }
+                   
+           }
+    cout<<"2. COMPUTER PROGRAMMING MARKS = ";
+    cin>>B;
+    if(B>=100)
+           {
+                   cout<<"YOU CAN'T ENTER MARKS MORE THAN 100: TRY AGAIN !";
+                   cout<<"PRESS c TO TRY AGAIN:";
+                   cin>>c;
+                   if (c=='c')
+                   {
+                              clrscr();
+                              goto saif;
+                   }
+           }
+    cout<<"3. ENGINEERING MECHANICS MARKS = ";
+    cin>>C;
+    if(C>=100)
+           {
+                  cout<<"YOU CAN'T ENTER MARKS MORE THAN 100: TRY AGAIN !";
+                    cout<<"PRESS c TO TRY AGAIN:";
+                   cin>>c;
+                   if (c=='c')
+                   {
+                              clrscr();
+                              goto saif;
+                   }
+           }
+    cout<<"4. LINEAR ALGEBRA MARKS = ";
+    cin>>D;
+    if(D>=100)
+           {
+                  cout<<"YOU CAN'T ENTER MARKS MORE THAN 100: TRY AGAIN !";
+                   cout<<"PRESS c TO TRY AGAIN:";
+                   cin>>c;
+                   if (c=='c')
+                   {
+                              clrscr();
+                              goto saif;
+                   }
+           }
+    cout<<"5. COMMUNICATION AND PRESENTATION SKILLS MARKS = ";
+    cin>>E;
+    if(E>=100)
+           {
+                   cout<<"YOU CAN'T ENTER MARKS MORE THAN 100: TRY AGAIN !";
+                    cout<<"PRESS c TO TRY AGAIN:";
+                   cin>>c;
+                   if (c=='c')
+                   {
+                              clrscr();
+                              goto saif;
+                   }
+           }
+    cout<<"6. PAKISTAN STUDIES MARKS = ";
+    cin>>F;
+           if(F>=100)
+           {
+                   cout<<"YOU CAN'T ENTER MARKS MORE THAN 100: TRY AGAIN !";
+                   cout<<"PRESS c TO TRY AGAIN:";
+                   cin>>c;
+                   if (c=='c')
+                   {
+                              clrscr();
+                              goto saif;
+                   }
+           }
+           MARKS_OBTAINED = (A+B+C+D+E+F);
+           AVERAGE  = (A+B+C+D+E+F)/6;
+           PERCENTAGE = (MARKS_OBTAINED*100)/600;
+           cout<<"\n\nMARKS OBTAINED =  "<<MARKS_OBTAINED<<endl;
+           cout<<"AVERAGE OF YOUR MARKS IS = "<<AVERAGE<<endl;
+           cout<<"PERCENTAGE IS = "<<PERCENTAGE<<endl;
+
+
+    if(PERCENTAGE>=90)
+    
+    {
+          cout<<"\nYOUR GRADE IS = A"<<endl;
+          cout<<"comment: EXCELLENT!";
+    }
+    else if(PERCENTAGE >=80)        
+    {
+         cout<<"\nYOUR GRADE IS = B"<<endl;
+         cout<<"comment: FAIR";
+    }
+    else if(PERCENTAGE >=60)    
+    {
+         cout<<"\nYOUR GRADE IS = C"<<endl;
+         cout<<"comment: WORK HARD";
+    }
+    else if(PERCENTAGE >=40)      
+    {
+         cout<<"\nYOUR GRADE IS = D"<<endl;
+         cout<<"comment: HARDLY PASSED";
+    }
+    else       
+    {
+         cout<<"\nYOUR GRADE IS = F"<<endl;
+         cout<<"comment: YOU ARE FAIL: TRY NEXT YEAR!";
+    }       
+     cout<<"\n\nDO YOU WANT MORE RESULTS? ";
+wrong:     cout<<"\nYES(y) NO (n)";
+     cin>>OPT;
+	
+    if(OPT=='y'||OPT=='Y')
+    {
+                clrscr();
+                goto saif;
+    }
+    else if(OPT=='n'||OPT=='N')
+    {
+          cout<<"THANKS BYE !";
+    }
+    else 
+    {
+         cout<<"WRONG SELECTION: YOU EITHER HAVE TO SELECT \"Y\" OR \"N\"";
+         goto wrong;
+    }
+
+    getch();
+}
+
+     
+ 
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+    int i, arr[5], max = 0, p = 0;
+    for(int i=0;i<5;i++)
+    {
+            cout<<"ENTER VALUE IN INDEX "<<i<<" OF THE ARRAY: ";
+            cin>>arr[i];
+    }
+    for(int i=0;i<5;i++)
+    {
+            if(max<arr[i])
+            max = arr[i];
+            
+    }
+    cout<<"GREATEST NUMBER IS : "<<max<<endl;
+    getch();
+}
+/******************************************************************************
+  Name: DOING MATRICES...
+  Copyright: Reserved with the Author:
+  Author: Saif Ur Rehman  
+  Date: 04/04/10 14:10
+  Description:  This Program gets input values from the user in 1st and then 2nd 
+                array(matrix), Adds the two matrices, shows the transpose of the
+                resultant matrix, also multiplies the two matrices...
+********************************************************************************/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main ()
+{
+    int mat1[3][3], mat2[3][3], mat3[3][3], res[3][3]={{0,0,0,},{0,0,0,},{0,0,0,}};
+    cout<<"FIRST MATRIX: \n";
+    for(int i=0; i<3; i++)
+    {
+            for(int j=0; j<3; j++)
+            {
+                    cout<<"row = "<<i<<" col = "<<j<<" ";
+                    cin>>mat1[i][j];
+            }
+            cout<<endl;
+    }
+    for(int i=0; i<3; i++)
+    {
+            for(int j=0; j<3; j++)
+            {
+                    cout<<mat1[i][j];
+                    cout<<"\t";
+            }
+            cout<<endl;
+    }
+    cout<<"\n\n-------------------\n";
+    cout<<"SECOND MATRIX: \n";
+    for(int i=0; i<3; i++)
+    {
+            for(int j=0; j<3; j++)
+            {
+                    cout<<"row = "<<i<<" column = "<<j<<" ";
+                    cin>>mat2[i][j];
+            }
+            cout<<endl;
+    }
+    for(int i=0; i<3; i++)
+    {
+            for(int j=0; j<3; j++)
+            {
+                    cout<<mat2[i][j];
+                    cout<<"\t";
+            }
+            cout<<endl;
+    }
+    cout<<"\n\n------------------\n";
+    
+    cout<<"SUM OF THE MATRICES IS: \n";
+    for(int i=0; i<3; i++)
+    {
+            for(int j=0; j<3; j++)
+            {
+                    mat3[i][j]=mat1[i][j]+mat2[i][j];
+                    cout<<mat3[i][j];
+                    cout<<"\t";
+            }
+            cout<<endl;
+    }
+      cout<<"TRANSPOSE OF MATRIX IS: \n";
+    for(int i=0; i<3; i++)
+    {
+            for(int j=0; j<3; j++)
+            {
+                    cout<<mat3[j][i];
+                    cout<<"\t";
+            }
+            cout<<endl;
+    }
+    cout<<"MULTIPLICATION: \n";
+    for(int i=0; i<3; i++)
+    {
+            for(int j=0; j<3; j++)
+            {
+                    for(int k=0; k<3; k++)
+                    {
+                            res[i][j]+= mat1[i][k]* mat2[k][j];
+                    }
+                    
+            }
+            
+    }
+    for(int i=0; i<3; i++)
+    {
+            for(int j=0; j<3; j++)
+            {
+            cout<<res[i][j]<<"\t";
+            }
+            cout<<endl;
+            }
+            getch();
+}
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+    int i , cno = 56;
+    char a, pass[4] = {'s','a','i','f'}, char a[4];
+    char sel;
+saif:    cout<<"enter your class No:";
+    cin>>cno;
+    if (cno==cno)
+    {
+     cout<<"Enter your password:";
+     a[i] = getche();
+    }
+    for (i=0; i<4;i++)
+    {
+        a[] = getche();
+        if(a[]==pass[])
+        {
+        cout<<"Password entered is correct:";
+        
+        }
+        else
+        cout<<"INCORRECT PASSWORD:";
+    }
+    cout<<"Do yo want to try again [y/n]?";
+    cin>>sel;
+    if (sel=='y')
+    {
+                 clrscr();
+                 goto saif;
+    }
+    else if(sel=='n')
+    {
+         cout<<"thanks BYE!";
+         
+    }
+    else
+    {
+        cout<<"wrong selection: enter either y or n:";
+    }
+    getch();
+}
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+    int counter;
+    for(int i=1; i<10000; i++)
+    {
+            counter  = 0;
+            for(int j=2; j<i; j++)
+            {
+                    if(!(i%j))
+                    counter++;
+            
+            }
+            if(!counter)
+            cout<<i<<"\t";
+    }
+    getch();
+}
+/******************************************************************************
+  Name: PrimeRcomposite
+  Copyright: Reserved with the author
+  Author: Saif Ur Rehman
+  Date: 30-03-10 00:21
+  Description: This program finds if the input number is prime or composite
+               if it is prime, the number is multiplied with 2, result is 
+               displayed, converse of the number is also shown.
+******************************************************************************/
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+    int a, b, c, d, e, f, flag = 0;
+    
+    cout<<"\t\tENTER A NUMBER GREATER THAN 10 LESS THAN 50 :";
+    cin >>a;
+    for (int i=2; i<a; i++)
+    {
+        if (a%i==0)
+        flag = 1;
+    }
+    if (flag)
+    cout<<"COMPOSITE: ";
+    else
+    { 
+    cout <<"PRIME: ";
+       b = a * 2;
+       cout<<a<<" * 2 = "<<b;
+       c = b % 10;
+       d = b / 10;
+       cout<<"\n\nREVERSE IS : "<<c<<d;
+    }
+    getch();
+}
+#include<iostream>
+#include<conio.h>
+#define clrscr() system ("cls")
+using namespace std;
+int main()
+{
+    int a, arr[5], flag =0 ;
+    char sel;
+saif:    cout<<"\t..::ENTER A NUMBER TO SEE IF IT'S PRESENT IN THE ARRAY : \n";
+    cout<<"ENTER ELEMENTS OF THE ARRAY: \n";
+    for(int i=0; i<5; i++)
+    {
+             cout<<"row = "<<i<<" ";
+             cin>>arr[i];    
+    }
+    cout<<"ENTER THE NUMBER:";
+    cin>>a;
+    for(int i=0; i<5; i++)
+    {   
+       if(a==arr[i])
+         flag = 1;
+         
+    }
+    if (flag)
+       {
+          cout<<a<<" IS PRESENT IN THE ARRAY: ";
+       }
+    else
+        {
+          cout<<a<<" IS NOT PRESENT IN THE ARRAY: ";
+        }
+        wrong:    cout<<"\n\n\t\tDO YOU WANT TO TRY OTHER NUMBERS [Y/N]?";
+    cin>>sel;
+    if (sel=='y'||sel=='Y')
+    {
+                 clrscr();
+                 goto saif;
+    }
+    else if(sel=='n'||sel=='N')
+    {
+         cout<<"\n\t\tTHANKS BYE ! ";
+    }
+    else
+    {
+        cout<<"\nWRONG SELECTION: YOU EITHER HAVE TO SELECT \"Y\" OR \"N\"";
+        goto wrong;
+    }
+    getch();
+}
+#include<iostream>
+#include<conio.h>
+#include<iomanip>
+using namespace std;
+int main()
+{
+    char a = 27, b = 30, c = 31;
+   cout<<"THIS PROGRAM USES SETW(n) MANIPULATOR TO CREATE THE FOLLOWING BEAUTIFUL SHAPES:\n";
+  cout<<"PLUS\n";
+  for(int i=1; i<=10; i++)
+  {
+  for(int j=1;j<=i;j++)
+  {           
+  cout<<"+";
+  }
+  cout<<endl;
+  }
+  cout<<endl<<endl;
+  cout<<"DOTS\n";
+  
+  for(int s = 10, i=1; i<=10; i++, s--)
+  {
+          cout<<setw(s);
+  for(int  j=1;j<=i;j++)
+  {           
+  cout<<".";
+  }
+  cout<<endl;
+  }
+  cout<<endl;
+   cout<<"EXCLAMATION MARKS\n";
+  for(int  i=10; i>=1; i--)
+  {
+  for(int j=1;j<=i;j++)
+  {           
+  cout<<"!";
+  }
+  cout<<endl;
+  }
+  cout<<"BACK ARROWS\n";
+  for(int s = 1, i=10; i>=1; i--, s++)
+  {
+          cout<<setw(s);
+  for(int  j=1;j<=i;j++)
+  {           
+  cout<<a;
+  }
+  cout<<endl;
+  }
+  cout<<"\n\n";
+  cout<<"UP AND DOWN TRIANGLES\n";
+  for(int s=10, i=1; i<=10; i+=2,s--)
+  {cout<<setw(s);
+  for(int j=1;j<=i;j++)
+  {           
+  cout<<b;
+  }
+  cout<<endl;
+  }
+  
+  // Reverse of the first.
+  
+  for(int s = 6, i=10; i>=1; i-=2, s++)
+  {cout<<setw(s);
+          cout<<setw(s);
+  for(int  j=1;j<i;j++)
+  {           
+  cout<<c;
+  }
+  cout<<endl;
+  }
+  cout<<endl;
+  cout<<"RIGHT PROJECTED ARROW\n";
+  for(int s=1, i=1; i<=5; i++, s++)
+    {
+            cout<<setw(s);
+            for(int j=1; j<=i; j++)
+            {
+                    cout<<"*";
+            }
+            cout<<endl;
+    }
+     for(int s=4, i=5; i>1; i--, s--)
+    {
+            cout<<setw(s);
+            for(int j=1; j<i; j++)
+            {
+                    cout<<"*";
+            }
+            cout<<endl;
+    }
+getch();
+}
+#include<iostream>
+#include<conio.h>
+#include<math.h>
+using namespace std;
+int main()
+{
+    int a, b;
+    cout<<"THIS PROGRAM FINDS SQUARE AND SQUARE ROOTS OF ALL THE NUMBERS FROM 1 UPTO THE\n";
+    cout<<"NUMBER ENTERED: \n";
+    cout<<"\nENTER A NUMBER: ";
+    cin>>a;
+    for(int i=1; i<=a; i++)
+    {
+            cout<<i<<"\t"<<i*i<<endl;
+           
+    }
+    cout<<"\n\n+=+=+=+=+=+=+=+=+=+\n";
+    cout<<"SQUARE ROOTS OF THE NUMBERS:\n";
+    for(int i=1; i<=a; i++)
+    {
+          
+            cout<<i<<"\t"<<sqrt(i)<<"\t|";
+            
+    }
+    getch();
+}
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+    int a, sum = 0;
+    cout<<"\t::THIS PROGRAM ADDS NUMBERS UNLESS \"-1\" IS ENTERED IN THE INPUT::";
+    cout<<"\n\nENTER THE NUMBERS:\n";
+    while(!(a==-1))
+    {
+     
+      cin>>a;
+      sum = sum + a;
+      
+    }
+    cout<<"SUM IS =  "<<sum+1;
+    getch();
+}
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+    float temp, celsius, ;
+    cout<<"\t\tThis Program Converts Temperature From Fahrenheit To Celsius:";
+    cout<<"\nFahrenheit Temp = ";
+    cin>>temp;
+    celsius = (temp-32)*5/9;
+    cout<<"Temperature in Celsius = "<<celsius<<endl;
+    double a = 9/4;
+    cout<<a;
+    
+    
+    
+    getch();
+}
+#include <iostream>
+#include<conio.h>
+#define clrscr() system("cls");
+using namespace std;
+int main()
+{
+    int c, words = 0, chr = 0, spaces = 0, the = 0, vowels = 0, ind =0;  
+    char a, sel;
+saif:cout<<"\t\tWORDs, CHARACTERs, SPACEs, THEs, AND VOWELs COUNTER: \n\n";   
+    while(a!=13)
+    {
+    a = getche();
+    chr++;
+       if (a==' ')
+       {
+       words++;
+       }
+       if(a==' ')
+       {
+       spaces++;
+       }
+       
+       
+       if((a=='a')||(a=='e')||(a=='i')||(a=='o')||(a=='u')||(a=='A')||(a=='E')||(a=='I')||(a=='O')||(a=='U'))
+       {
+         vowels++;
+       }
+if((a=='t')||(a=='h')||(a=='e')||(a=='T')||(a=='H')||(a=='E'))
+{
+   if((a=='t')||(a=='T'))
+    {   
+    ind = 1;
+    }
+    if((ind==1)&&(a=='h')||(a=='H'))
+    {
+    ind = 2;
+    }
+    if((ind==2)&&(a=='e')||(a=='E'))
+    {
+    ind = 3;
+    the++;
+    }
+}
+     else
+     {
+     ind = 0;
+     } 
+     
+}
+   cout<<"\n\nWORDS  = "<<words+1<<endl;
+   cout<<"SPACES  = "<<spaces<<endl;
+   cout<<"VOWELS  = "<<vowels<<endl;
+   cout<<"THE  = "<<the<<endl;
+   cout<<"CHARACTERS  = "<<chr<<endl;
+   
+
+
+    getch();
+}
+
+#include <iostream>
+#include<conio.h>
+#define clrscr() system("cls");
+using namespace std;
+int main()
+{
+    int words = 0;
+    char a, sel;
+saif:    cout<<"\t\tTHIS IS A WORD COUNTER PROGRAM: \n\n";
+    do
+    {
+       a =  getche();
+       if (a == ' ')
+       words ++;
+       
+    }
+    while(a!='\r');
+    cout<<"\n\nWORDS IN YOUR TEXT ARE: "<<words+1<<"\n\n\n";
+wrong:    cout<<"DO YOU WANT TO TRY AGAIN:\n YES(y) Or NO(n):";
+    cin>>sel;
+    if (sel=='y'||sel=='Y')
+    {
+           clrscr();
+           goto saif;
+    }
+    else if(sel=='n'||sel=='N')
+    {
+         cout<<"THANKS FOR USING THIS PROGRAM.GOODBYE!";
+    }
+    else
+    {
+    cout<<"WRONG SELECTION, YOU EITHER HAVE TO SELECT \"Y\" OR \"N\":\n";
+    goto wrong;
+    }
+    getch();
+}

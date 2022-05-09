@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+class ali
+{
+private:
+int marks;
+string name;
+public:
+ali (int marks, string name="ali hassan")
+{
+cout<<"student name is "<<name;
+cout<<"\n"<<name<<" marks is "<<marks;
+}
+};
+
+
+int main()
+{	
+ali hassan(880);// there one argument is missing //
+}

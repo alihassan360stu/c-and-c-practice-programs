@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class ali
+{
+private:
+	int marks;
+	static int count;
+public:
+	void data()
+	{   cout<<"\nEnter student  "<<count<<" marks ";
+		cin>>marks;
+		count++;
+	}
+	
+};
+
+int ali :: count;
+int main()
+{
+	ali abj[5];
+	abj[0].data();
+	abj[1].data();
+	abj[2].data();
+	abj[3].data();
+	abj[4].data();
+
+}
+// string cannot possible as a static variable because is char array//

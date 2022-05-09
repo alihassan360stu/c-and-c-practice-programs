@@ -1,0 +1,102 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int arr[50];
+struct student{
+	int counter;
+	string name="hassan";
+	string f_name;
+	string cnic;
+	string dob;
+	string address;
+	int roll;
+	student data_insert();
+	void data_display();
+	student()
+	{
+		name="ali hassan";
+		f_name="saadat ali";
+		cnic="14101-55025-11";
+		dob="02 05 2000";
+		address="passkally";
+		roll=1;
+		counter=0;
+	}
+};
+
+void student::data_display()
+{
+	system("cls");
+	cout<<"\t\t**************\n";
+	cout<<"\t\tDISPLAY RECORD\n";
+	cout<<"\t\t**************\n\n";
+	
+	cout<<"\n**********************************************************\n\n";
+	cout<<"student name is "<<name;
+	cout<<"\n\nstudent name is "<<f_name;
+	cout<<"\n\nstudent cnic is "<<cnic;
+	cout<<"\n\nstudent date of birth is "<<dob;
+	cout<<"\n\nstudent address is "<<address;	
+	cout<<"\n\nstudent roll number  is "<<roll;
+		cout<<"\n\n enter any key ";
+		getch();
+}
+
+student student::data_insert()
+{   system("cls");
+	student ali;
+	cout<<"\t\t*************\n";
+	cout<<"\t\tINSERT RECORD\n";
+	cout<<"\t\t*************\n";
+	cout<<"enetr student name ";
+	cin>>ali.name;
+	cout<<"\n\n enetr youe father name ";
+	cin>>ali.f_name;
+	cout<<"\n\n enter your cnin number ";
+	cin>>ali.cnic;
+	cout<<"\n\nenter your date of birth ";
+	cin>>ali.dob;
+	cout<<"\n\nenter your address ";
+	cin>>ali.address;
+	cout<<"\n\nenter your roll ";
+	label:
+	cin>>ali.roll;
+	for(int i=0;i<50;i++)
+	{
+	if(ali.roll==arr[i])
+		{cout<<"\n\n please change the roll number ";goto label;}
+	}
+	return ali;
+}
+
+
+int main()
+{
+		int b=1; arr[0]=1;
+        student collect[50],obj;
+	while(true){    system("cls");
+		cout<<"\t\t*************\n";
+	    cout<<"\t\tINSERT RECORD\n";
+	    cout<<"\t\t*************\n\n\n";
+		cout<<"\n\t enter 1 to add recoed ";
+		cout<<"\n\t enter 2 show record";
+		cout<<"\n\t enter 3 exit ";
+		int option;cin>>option;
+		if(option==1)
+		{
+			for(int i=b;i<50;i++){b++;collect[i]=obj.data_insert();break;}	
+		}
+		if(option==2)
+		{
+			for(int i=0;i<b;i++)
+			{
+				collect[i].data_display();
+				arr[i]=collect[i].roll;
+				
+			}
+		}
+		if(option==3){break;}
+	}
+	system("cls");
+	cout<<"\n\n\n\n\n\n\n\n\n\n\t\t\t\t thank  for using \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+}

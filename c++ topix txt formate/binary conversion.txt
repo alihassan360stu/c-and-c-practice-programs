@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+#include<iostream>
+
+using namespace std;
+int main()
+{
+	int v;
+	cout<<"enter value of a ";
+	cin>>v;
+	char a[50];
+	int check=0;
+	for(int i=0;v!=0;i++)
+	{
+		if(v%2!=0)
+		{
+		
+			a[check]='1';
+			check++;
+			v=v/2;
+		}
+		else{
+		   	a[check]='0';
+			check++;
+			v=v/2;
+		}
+	}
+	
+	for(int i=check-1;i>=0;i--)
+	{
+		printf("%c",a[i]);
+	}
+	
+	
+}

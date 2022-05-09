@@ -1,0 +1,52 @@
+//        multiple inheritance by ab example
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class ali
+{
+protected:
+string child_son;
+void ali_love();	
+};
+
+class bush
+{
+protected:
+string child_dau;
+void bush_love();	
+};
+
+class life : protected ali,bush
+{
+private :
+string love;
+public:
+void happy(life);
+};
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  a  b   life  with children //
+void ali :: ali_love()
+{
+cout<<"ali enter your son name ";
+cin>>child_son;	
+}
+void bush :: bush_love()
+{
+cout<<"bushra enter your son name ";
+cin>>child_dau;	
+}
+void life :: happy(life kh)
+{
+	kh.ali_love();
+	cout<<"\n";
+	kh.bush_love();
+	cout<<"\n\n bush and ali hassan do you love with your son ";
+	cin>>love;
+	
+}
+
+using namespace std;
+int main()
+{
+life kh;
+kh.happy(kh);
+}// visibility mode is protected thats why kh object pass to the happy function  //

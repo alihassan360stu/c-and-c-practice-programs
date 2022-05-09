@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class ali
+{
+public:	
+int a;
+
+ali(){a=56;}
+void display()
+{
+cout<<"\n hy bus hassan kesy ho "<<a<<endl;
+a++;
+}	
+};
+int main()
+{   ali c;
+    c.display();
+	ali &h=c;
+	h.display();
+	h.display();
+	h.display();
+	c.display();
+}

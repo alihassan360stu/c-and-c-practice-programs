@@ -1,0 +1,35 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class ali
+{
+public:
+string name;
+void details ();	
+};
+class bus : private ali
+{   private:
+	int id;
+	public:
+	void getdata ();
+};
+
+void bus :: getdata()
+{
+cout<<"enter your name ";
+cin>>name;
+cout<<"\n enter your id ";
+cin>>id;	
+}
+/* this function will not be executed because it is change to private for derived class
+void ali :: details ()
+{
+	cout<<"My name is hassan and i am base class of name ali \n";
+}
+*/
+
+int main()
+{
+bus ha;
+ha.getdata();	
+}

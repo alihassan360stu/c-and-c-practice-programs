@@ -1,0 +1,35 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class ali
+{
+public:
+string name;
+void details ();	
+};
+class bus :public ali
+{   private:
+	int id;
+	public:
+	void getdata ();
+};
+
+void bus :: getdata()
+{
+cout<<"enter your name ";
+cin>>name;
+cout<<"\n enter your id ";
+cin>>id;	
+}
+void ali :: details ()
+{
+	cout<<"My name is hassan and i am base class of name ali \n";
+}
+
+int main()
+{
+bus ha;
+ha.details();
+getch();
+ha.getdata();	
+}

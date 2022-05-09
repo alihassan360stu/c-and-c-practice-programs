@@ -1,0 +1,37 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class ali
+{
+protected:
+string name;
+void details ();	
+};
+class bus : protected ali
+{   private:
+	int id;
+	public:
+	void getdata (bus);
+};
+
+void bus :: getdata(bus kh)
+{
+kh.details();// it is working because inside the class //
+cout<<"enter your name ";
+cin>>name;
+cout<<"\n enter your id ";
+cin>>id;	
+}
+
+void ali :: details ()
+{
+	cout<<"My name is hassan and i am base class of name ali \n";
+}
+
+int main()
+{
+bus ha;
+// ha.details();   not working because out of class 
+ha.getdata(ha);
+// ha.name=45;   it is also protected data outside of class 
+}

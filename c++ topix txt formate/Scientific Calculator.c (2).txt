@@ -1,0 +1,694 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+
+void arithmatic();
+void trignomatric();
+void matrices();
+void equations();
+
+void main()
+{
+	int ch;
+	
+	system("cls");
+	printf("\n\t\t S C I E N T I F I C  C A L C U L A T O R\n\n\n");
+	
+	printf("(1) Arithmatic Operation.\n");
+	printf("(2) Trignomatric Operation.\n");
+	printf("(3) Matrix.\n");
+	printf("(4) Equations.\n");
+	printf("(0) Exit.\n");
+
+	
+	
+	
+	printf("\nSelecct Operation:\n");
+	scanf("%d",&ch);
+	if(ch==0){
+		printf("Exit...");
+		exit(0);
+	}
+	switch(ch){
+		
+		
+		case 1:
+			arithmatic();
+			break;
+		
+		case 2:
+			trignomatric();
+			break;
+		case 3:
+		
+			matrices();
+			break;
+		case 4:
+		
+			equations();
+			break;
+		default:
+			printf("Invalid Selection...");
+			
+	}
+	
+}
+
+
+
+void arithmatic()
+{
+	int n,choice,i,a,b;
+	float x,y,z,result;
+	
+	system("cls");
+	
+	
+	printf("\n\t\t S C I E N T I F I C  C A L C U L A T O R\n\n\n");
+	printf("||\t\tArithmatic Operations\t\t||");
+	
+	
+	printf("\n Select your operation:\n");
+printf("0. Exit\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n");
+printf("5. Square root\n6. X ^ Y\n7. X ^ 2\n8. X ^ 3\n");
+printf("9. 1 / X\n10. X ^ (1 / Y)\n11. X ^ (1 / 3)\n");
+printf("12. 10 ^ X\n13. X!\n14. Percentage\n15. log10(x)\n16. Modulus\n17. Main Menu\n");
+
+scanf("%d", &choice);
+if(choice == 0)
+{
+	exit(0);
+}
+
+switch(choice) {
+case 1:
+printf("Enter X: ");
+scanf("%f", &x);
+printf("\nEnter Y: ");
+scanf("%f", &y);
+result = x + y;
+printf("\nResult: %f", result);
+break;
+case 2:
+printf("Enter X: ");
+scanf("%f", &x);
+printf("\nEnter Y: ");
+scanf("%f", &y);
+result = x - y;
+printf("\nResult: %f", result);
+break;
+case 3:
+printf("Enter X: ");
+scanf("%f", &x);
+printf("\nEnter Y: ");
+scanf("%f", &y);
+result = x * y;
+printf("\nResult: %f", result);
+break;
+case 4:
+printf("Enter X: ");
+scanf("%f", &x);
+printf("\nEnter Y: ");
+scanf("%f", &y);
+result = x / y;
+printf("\nResult: %f", result);
+break;
+case 5:
+printf("Enter X: ");
+scanf("%f", &x);
+result = sqrt(x);
+printf("\nResult: %f", result);
+break;
+case 6:
+printf("Enter X: ");
+scanf("%f", &x);
+printf("\nEnter Y: ");
+scanf("%f", &y);
+result = pow(x, y);
+printf("\nResult: %f", result);
+break;
+case 7:
+printf("Enter X: ");
+scanf("%f", &x);
+result = pow(x, 2);
+printf("\nResult: %f", result);
+break;
+case 8:
+printf("Enter X: ");
+scanf("%f", &x);
+result = pow(x, 3);
+printf("\nResult: %f", result);
+break;
+case 9:
+printf("Enter X: ");
+scanf("%f", &x);
+result = pow(x, -1);
+printf("\nResult: %f", result);
+break;
+case 10:
+printf("Enter X: ");
+scanf("%f", &x);
+printf("\nEnter Y: ");
+scanf("%f", &y);
+result = pow(x, (1/y));
+printf("\nResult: %f", result);
+break;
+case 11:
+printf("Enter X: ");
+scanf("%f", &x);
+y = 3;
+result = pow(x, (1/y));
+printf("\nResult: %f", result);
+break;
+case 12:
+printf("Enter X: ");
+scanf("%f", &x);
+result = pow(10, x);
+printf("\nResult: %f", result);
+break;
+case 13:
+printf("Enter X: ");
+scanf("%f", &x);
+result = 1;
+for(i = 1; i <= x; i++) {
+result = result * i;
+}
+printf("\nResult: %.f", result);
+break;
+case 14:
+printf("Enter X: ");
+scanf("%f", &x);
+printf("\nEnter Y: ");
+scanf("%f", &y);
+result = (x * y) / 100;
+printf("\nResult: %.2f", result);
+break;
+case 15:
+printf("Enter X: ");
+scanf("%f", &x);
+result = log10(x);
+printf("\nResult: %.2f", result);
+break;
+case 16:
+printf("Enter X: ");
+scanf("%d", &a);
+printf("\nEnter Y: ");
+scanf("%d", &b);
+result = a % b;
+printf("\nResult: %d", result);
+break;
+case 17:
+	main();
+	break;
+default:
+	printf("Invalid Statement..");
+	printf("\nPress any key to go back...");
+	getch();
+	arithmatic();
+}
+	
+	printf("\n\nWhat Next?\n");
+	printf("(1) Main Menu.\n");
+	printf("(2) More Arithmatic Operation.\n");
+	printf("(3) Exit.\n\n");
+	
+	scanf("%d",&n);
+	
+	switch(n)
+	{
+		case 1:
+			main();
+			break;
+		case 2:
+		
+			arithmatic();
+			break;
+		
+		case 3:
+			printf("Exit");
+			break;
+		default:
+			printf("Invalid Selection...");
+			
+	}
+	
+}
+
+void trignomatric()
+{
+	int a;
+	int choice;
+	float x, y, result;
+
+	system("cls");
+	
+	printf("\n\t\t S C I E N T I F I C  C A L C U L A T O R\n\n\n");
+	printf("||\t\tTrignomatric Operations\t\t||");
+
+	printf("\n\n");
+	
+	printf("0. Exit\n1. Sin(X)\n2. Cos(X)\n3. Tan(X)\n4. Cosec(X)\n");
+	printf("5. Cot(X)\n6. Sec(X)\n7. arc sin(X)\n8. arc cos(X)\n9. arc tan(X)\n10. Main Menu\n");
+	printf("Choice: ");
+	scanf("%d", &choice);
+	
+if(choice == 0)
+{
+	exit(0);
+}
+
+switch(choice){
+case 1:
+printf("Enter X: ");
+scanf("%f", &x);
+result = sin(x * 3.14159 / 180);
+printf("\nResult: %.2f", result);
+break;
+case 2:
+printf("Enter X: ");
+scanf("%f", &x);
+result = cos(x * 3.14159 / 180);
+printf("\nResult: %.2f", result);
+break;
+case 3:
+printf("Enter X: ");
+scanf("%f", &x);
+result = tan(x * 3.14159 / 180);
+printf("\nResult: %.2f", result);
+break;
+case 4:
+printf("Enter X: ");
+scanf("%f", &x);
+result = 1 / (sin(x * 3.14159 / 180));
+printf("\nResult: %.2f", result);
+break;
+case 5:
+printf("Enter X: ");
+scanf("%f", &x);
+result = 1 / tan(x * 3.14159 / 180);
+printf("\nResult: %.2f", result);
+break;
+case 6:
+printf("Enter X: ");
+scanf("%f", &x);
+result = 1 / cos(x * 3.14159 / 180);
+printf("\nResult: %.2f", result);
+break;
+case 7:
+printf("Enter X: ");
+scanf("%f", &x);
+result = asin(x * 3.14159 / 180);
+printf("\nResult: %.2f", result);
+break;
+case 8:
+printf("Enter X: ");
+scanf("%f", &x);
+result = acos(x * 3.14159 / 180);
+printf("\nResult: %.2f", result);
+break;
+case 9:
+printf("Enter X: ");
+scanf("%f", &x);
+result = atan(x * 3.14159 / 180);
+printf("\nResult: %.2f", result);
+break;
+case 10:
+	main();
+	break;
+default:
+printf("\nInvalid Choice!");
+printf("\nPress any key to go back.");
+getch();
+trignomatric();
+break;
+}	
+	printf("\n\nWhat Next?\n");
+	printf("(1) Main Menu.\n");
+	printf("(2) More Trignomatric Operation.\n");
+	printf("(3) Exit.\n\n");
+	
+	scanf("%d",&a);
+	
+	switch(a)
+	{
+		case 1:
+			main();
+			break;
+		case 2:
+		
+			trignomatric();
+			break;
+		
+		case 3:
+			printf("Exit");
+			break;
+		default:
+			printf("Invalid Selection...");
+
+			break;
+	}
+	
+
+
+}
+
+void matrices()
+{
+	int a;
+	
+	system("cls");
+	
+	printf("\n\t\t S C I E N T I F I C  C A L C U L A T O R\n\n\n");
+	printf("||\t\tMatrices\t\t||\n");
+
+	int m, n, p, q, c, d, k, add = 0,choice;
+printf("Format of equation : \n");
+printf("0. Exit\n");
+printf("1. Matrix Multiplication\n");
+printf("2. Matrix Subtraction\n");
+printf("3. Matrix Addition\n");
+printf("4. Matrix Transpose\n");
+printf("5. Main Menu\n");
+
+  int matrix[10][10],first[10][10], second[10][10], multiply[10][10],difference[10][10],sum[10][10],transpose[10][10];
+ printf("Choice: ");
+	scanf("%d", &choice);
+	
+if(choice == 0)
+{
+	exit(0);
+}
+
+switch(choice){
+case 1:
+  printf("Enter number of rows and columns of first matrix\n");
+  scanf("%d%d", &m, &n);
+  printf("Enter elements of first matrix\n");
+ 
+  for (c = 0; c < m; c++)
+    for (d = 0; d < n; d++)
+      scanf("%d", &first[c][d]);
+ 
+  printf("Enter number of rows and columns of second matrix\n");
+  scanf("%d%d", &p, &q);
+ 
+  if (n != p)
+    printf("The matrices can't be multiplied with each other.\n");
+  else
+  {
+    printf("Enter elements of second matrix\n");
+ 
+    for (c = 0; c < p; c++)
+      for (d = 0; d < q; d++)
+        scanf("%d", &second[c][d]);
+ 
+    for (c = 0; c < m; c++) {
+      for (d = 0; d < q; d++) {
+        for (k = 0; k < p; k++) {
+          add = add + first[c][k]*second[k][d];
+        }
+ 
+        multiply[c][d] = add;
+        add = 0;
+      }
+    }
+ 
+    printf("Product of the matrices:\n");
+ 
+    for (c = 0; c < m; c++) {
+      for (d = 0; d < q; d++)
+        printf("%d\t", multiply[c][d]);
+ 
+      printf("\n");
+    }
+  }
+break;
+
+
+case 2:
+printf("Enter the number of rows and columns of matrix\n");
+   scanf("%d%d", &m, &n);
+   printf("Enter the elements of first matrix\n");
+ 
+   for (c = 0; c < m; c++)
+     for (d = 0 ; d < n; d++)
+       scanf("%d", &first[c][d]);
+ 
+   printf("Enter the elements of second matrix\n");
+ 
+   for (c = 0; c < m; c++)
+     for (d = 0; d < n; d++)
+         scanf("%d", &second[c][d]);
+ 
+   printf("Difference of entered matrices:-\n");
+ 
+   for (c = 0; c < m; c++) {
+     for (d = 0; d < n; d++) {
+       difference[c][d] = first[c][d] - second[c][d];
+       printf("%d\t",difference[c][d]);
+     }
+     printf("\n");
+   }
+break;
+case 3:
+printf("Enter the number of rows and columns of matrix\n");
+   scanf("%d%d", &m, &n);
+   printf("Enter the elements of first matrix\n");
+ 
+   for (c = 0; c < m; c++)
+      for (d = 0; d < n; d++)
+         scanf("%d", &first[c][d]);
+ 
+   printf("Enter the elements of second matrix\n");
+ 
+   for (c = 0; c < m; c++)
+      for (d = 0 ; d < n; d++)
+         scanf("%d", &second[c][d]);
+   
+   printf("Sum of entered matrices:-\n");
+   
+   for (c = 0; c < m; c++) {
+      for (d = 0 ; d < n; d++) {
+         sum[c][d] = first[c][d] + second[c][d];
+         printf("%d\t", sum[c][d]);
+      }
+      printf("\n");
+   }
+break;
+case 4:
+printf("Enter the number of rows and columns of matrix\n");
+   scanf("%d%d", &m, &n);
+   
+   printf("Enter elements of the matrix\n");
+ 
+   for (c = 0; c < m; c++)
+      for(d = 0; d < n; d++)
+         scanf("%d", &matrix[c][d]);
+ 
+   for (c = 0; c < m; c++)
+      for( d = 0 ; d < n ; d++ )
+         transpose[d][c] = matrix[c][d];
+ 
+   printf("Transpose of the matrix:\n");
+ 
+   for (c = 0; c < n; c++) {
+      for (d = 0; d < m; d++)
+         printf("%d\t", transpose[c][d]);
+      printf("\n");
+   }
+break;
+case 5:
+main();
+break;
+default:
+
+printf("\nInvalid Choice!");
+printf("\nPress any key to go back.");
+getch();
+matrices();
+}	
+	printf("\n\nWhat Next?\n");
+	printf("(1) Main Menu.\n");
+	printf("(2) Select Matrices.\n");
+	printf("(3) Exit.\n\n");
+	
+	scanf("%d",&a);
+	
+	switch(a)
+	{
+		case 1:
+			main();
+			break;
+		case 2:
+		
+			matrices();
+			break;
+		
+		case 3:
+			printf("Exit");
+			break;
+		default:
+			printf("Invalid Selection...");
+			break;
+	}
+	
+
+	
+	
+}
+
+void equations()
+{
+	int a;
+	system("cls");
+	
+	printf("\n\t\t S C I E N T I F I C  C A L C U L A T O R\n\n\n");
+	
+int i;
+
+printf("||\t\tEquation Solver\t\t||\n");
+printf("Format of equation : \n");
+printf("0. Exit\n");
+printf("1. ax+b=c\n");
+printf("2. ax+by+c=0\n   dx+ey+f=0\n");
+printf("3. ax^2+bx+c=0\n");
+printf("4. ax^3+bx^2+cx+d=0\n");
+printf("5. Main Menu\n");
+printf("\nEnter number for format : ");
+scanf("%d",&i);
+if(i==0)
+exit(0);
+if(i==1)
+lin1();
+if(i==2)
+lin2();
+if(i==3)
+quad();
+if(i==4)
+cubic();
+if(i==5)
+main();
+else{
+	printf("Invalid Selection...");
+	getch();
+	equations();
+	
+}
+		
+	printf("\n\nWhat Next?\n");
+	printf("(1) Main Menu.\n");
+	printf("(2) More Equations.\n");
+	printf("(3) Exit.\n\n");
+	
+	scanf("%d",&a);
+	
+	switch(a)
+	{
+		case 1:
+			main();
+			break;
+		case 2:
+		
+			equations();
+			break;
+		
+		case 3:
+			printf("Exit");
+			break;
+		default:
+			printf("Invalid Selection...");
+			break;
+	}
+}
+
+
+lin1()
+{
+float a,b,c,x;
+
+printf("ax + b = c\n");
+printf("Enter a,b and c separated by commas :\n");
+scanf("%f,%f,%f",&a,&b,&c);
+printf("\n%fx=%f-%f",a,c,b);
+printf("\n%fx=%f",a,c-b);
+x = (c-b)/a;
+printf("\n=>x = %f",x);
+}
+
+lin2()
+{
+float a,b,c,d,e,f,x,y;
+
+printf("ax + by+ c = 0\ndx + ey + f = 0");
+printf("\nEnter a,b,c,d,e and f separated by commas : \n");
+scanf("%f,%f,%f,%f,%f,%f",&a,&b,&c,&d,&e,&f);
+x = ((f*b)-(c*e))/((a*e)-(d*b));
+y = ((c*d)-(f*a))/((a*e)-(d*b));
+printf("\n x = %f\n y = %f",x,y);
+
+}
+
+quad()
+{
+float a,b,c,x1,x2,d;
+
+printf("ax^2 + bx + c = 0");
+printf("\nEnter a,b,c separated by commas : \n");
+scanf("%f,%f,%f",&a,&b,&c);
+d = pow(b,2)-(4*a*c);
+if(d>=0)
+{
+x1 = (-b+sqrt(d))/(2*a);
+x2 = (-b-(sqrt(d)))/(2*a);
+printf("\nRoot 1 : %f\nRoot 2 : %f",x1,x2);
+}
+if(d<0)
+{
+d = ((4*a*c)-pow(b,2))/(2*a);
+printf("\nRoot 1 : %f+%fi",((-b)/(2*a)),d);
+printf("\nRoot 2 : %f-%fi",((-b)/(2*a)),d);
+}
+
+}
+
+cubic()
+{float a,b,c,d,x1,x2,x3,disc;
+int i;
+float expr;
+
+printf("ax^3 + bx^2 + cx + d = 0\n Enter a,b,c,d : \n");
+scanf("%f,%f,%f,%f",&a,&b,&c,&d);
+i = 0;
+while(i<abs(d))
+{
+expr = a*pow(i,3)+b*pow(i,2)+c*i+d;
+if(expr==0)
+{
+x1=i;
+break;
+}
+expr = a*pow(-i,3)+b*pow(-i,2)+c*(-i)+d;
+if(expr==0)
+{
+x1=-i;
+break;
+}
+i++;
+}
+printf("Root 1 = %f",x1);
+b = b + (a*(x1));
+c = c + (b*(x1));
+disc = (b*b)-(4*a*c);
+if(disc>=0)
+{
+x2 = (-b+sqrt(disc))/(2*a);
+x3 = (-b-sqrt(disc))/(2*a);
+printf("\nRoot 2 = %f\nRoot 3 = %f",x2,x3);
+}
+else
+{
+disc = ((4*a*c)-pow(b,2))/(2*a);
+printf("\nRoot 2 : %f+%fi",((-b)/(2*a)),disc);
+printf("\nRoot 3 : %f-%fi",((-b)/(2*a)),disc);
+}
+}

@@ -1,0 +1,36 @@
+/*
+copy contructer is just look like reffrence object but not refference.
+*/
+
+#include<iostream>
+using namespace std;
+class ali
+{
+int a;
+public:	
+ali(){}
+ali (int temp){a=temp;}// parametize constructer
+ali (ali &obj)
+{
+a=obj.a;
+cout<<"i am copy constructer now "<<a<<endl;// copy constructer//
+}
+
+void display()
+{
+cout<<"hy bus hassan kesy ho "<<a<<endl;// display()
+a++;
+}	
+};// class end//
+
+int main()
+{ 
+ali y,z(50);// create two variable of class type y,z(50)
+y.display();// called dispaly function with the help of y object
+z.display();
+z.display();
+ali z1(z);// copy contructor called and z1 is new object
+z1.display();
+z1.display();
+z.display();
+}

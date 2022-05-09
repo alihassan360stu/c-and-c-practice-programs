@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class ali
+{
+private:
+int marks;
+static int id;
+public:
+void display()
+{
+cout<<"\nmy name is ali hassan ";	
+}
+
+static add()// static function
+{
+//marks=45; we cannot use there marks variable because it is not static variable //
+// this->display(); there we cannot use this and display function because both are not static member//
+cout<<"\nI am static member function and my id is "<<id;	
+}
+
+};
+
+int ali :: id=1234;// static variable 
+
+
+int main()
+{	
+ali::add();
+}

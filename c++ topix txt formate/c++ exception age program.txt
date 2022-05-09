@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int age;
+try
+  { 
+     cout<<"enter age of person ";
+    cin>>age;
+	if(age<35)
+	{
+	cout<<"you are in good helth";	
+	}
+	else
+	{
+		throw age;
+	}
+  } 
+catch(int age1)
+{
+  cout<<"\nyour age is greather then 35 ";
+  cout<<"\n your age  : "<<age1;	
+}
+ 
+
+	
+}

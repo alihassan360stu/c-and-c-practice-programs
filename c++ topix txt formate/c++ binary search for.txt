@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int ser;
+int size=11;
+int arr[size]={12,34,54,65,67,78,89,90,91,95,96};
+label:
+int a=0; 
+int b=size-1;// 10
+int c=(a+b)/2;// 5
+cout<<"enter arry searching number ";
+cin>>ser;
+for(int i=ser;!(a>c or b<c);i++)
+{
+
+if(ser==arr[c]){cout<<"Number found "<<arr[c]; break;}
+  else if(ser>arr[c]){a=c+1;c=(a+b)/2;} 
+  else if(ser<arr[c]){b=c-1; c=(a+b)/2;}
+}
+int t;
+cout<<"\nenter 1 next enter  2 exit ";
+cin>>t;
+if(t==1)
+{
+goto label;	
+}
+}

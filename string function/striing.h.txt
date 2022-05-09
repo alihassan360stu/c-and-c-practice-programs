@@ -1,0 +1,10 @@
+//strcpy(name,ali);
+//strncpy(name,ali,2);
+//strcat(name,ali);
+//strncat(name,ali,3);
+//ret=strchr(name,ch);
+//ret=strrchr(name,ch);
+//ret = strlen(name);
+// ret = strstr(name,"n");
+
+
